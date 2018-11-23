@@ -14,6 +14,7 @@
 		5650521221A48736007A4A4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5650521021A48736007A4A4F /* LaunchScreen.storyboard */; };
 		5650521D21A48736007A4A4F /* MemeMe_1_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650521C21A48736007A4A4F /* MemeMe_1_0Tests.swift */; };
 		5650522821A48737007A4A4F /* MemeMe_1_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650522721A48737007A4A4F /* MemeMe_1_0UITests.swift */; };
+		56F4392821A8958F007D1D3F /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F4392721A8958F007D1D3F /* Meme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		5650522321A48737007A4A4F /* MemeMe 1.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MemeMe 1.0UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5650522721A48737007A4A4F /* MemeMe_1_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeMe_1_0UITests.swift; sourceTree = "<group>"; };
 		5650522921A48737007A4A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56F4392721A8958F007D1D3F /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				5650520721A48736007A4A4F /* AppDelegate.swift */,
+				56F4392721A8958F007D1D3F /* Meme.swift */,
 				5650520921A48736007A4A4F /* ViewController.swift */,
 				5650520B21A48736007A4A4F /* Main.storyboard */,
 				5650520E21A48736007A4A4F /* Assets.xcassets */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56F4392821A8958F007D1D3F /* Meme.swift in Sources */,
 				5650520A21A48736007A4A4F /* ViewController.swift in Sources */,
 				5650520821A48736007A4A4F /* AppDelegate.swift in Sources */,
 			);
@@ -427,6 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U7EXGMSEQW;
 				INFOPLIST_FILE = "MemeMe 1.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saraalhumud.MemeMe-1-0";
@@ -441,6 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U7EXGMSEQW;
 				INFOPLIST_FILE = "MemeMe 1.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saraalhumud.MemeMe-1-0";
