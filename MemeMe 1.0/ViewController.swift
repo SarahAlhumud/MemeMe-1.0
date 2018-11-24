@@ -95,7 +95,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         return true
     }
     
-    func specifyTextAttributes(){
+    func setupTextField(tf: UITextField, text: String) {
         let textAttributes: [String: Any] = [
             NSAttributedStringKey.strokeColor.rawValue: UIColor.black,
             NSAttributedStringKey.foregroundColor.rawValue: UIColor.white,
@@ -103,13 +103,13 @@ UINavigationControllerDelegate, UITextFieldDelegate {
             NSAttributedStringKey.font.rawValue: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!
         ]
         
-        topField.defaultTextAttributes = textAttributes
-        bottomField.defaultTextAttributes = textAttributes
-        topField.borderStyle = .none
-        bottomField.borderStyle = .none
-        topField.textAlignment = .center
-        bottomField.textAlignment = .center
-        
+        tf.defaultTextAttributes = textAttributes
+        tf.borderStyle = .none
+        tf.textColor = UIColor.white
+        tf.tintColor = UIColor.white
+        tf.textAlignment = .center
+        tf.text = text
+        tf.delegate = self
     }
     
     @objc func keyboardWillShow(_ notification: Notification){
@@ -167,10 +167,9 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         lunchState()
-        topField.delegate = self
-        bottomField.delegate = self
+        setupTextField(tf: topField, text: "TOP")
+        setupTextField(tf: bottomField, text: "BOTTOM")
         
-        specifyTextAttributes()
     }
     
     override func viewWillAppear(_ animated: Bool) {
