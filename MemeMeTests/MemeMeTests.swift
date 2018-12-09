@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import MemeMe_1_0
+@testable import MemeMe
 
 class MemeMe_1_0Tests: XCTestCase {
     

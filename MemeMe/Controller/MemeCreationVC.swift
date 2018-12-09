@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MemeCreationVC.swift
 //  MemeMe 1.0
 //
 //  Created by SARA ALHUMUD on 3/12/1440 AH.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate,
+class MemeCreationVC: UIViewController, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var cancelBtn: UIBarButtonItem!
@@ -76,8 +76,8 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     func lunchState(){
         shareBtn.isEnabled = false
         img.image = nil
-        topField.text = "Top"
-        bottomField.text = "Bottom"
+        topField.text = "TOP"
+        bottomField.text = "BOTTOM"
         cameraBtn.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         topField.resignFirstResponder()
         bottomField.resignFirstResponder()
@@ -85,7 +85,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField.text == "Top" || textField.text == "Bottom" {
+        if textField.text == "TOP" || textField.text == "BOTTOM" {
             textField.text = ""
         }
     }
@@ -145,6 +145,8 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     func save(memedImage: UIImage){
         let meme = Meme(topText: topField.text ?? "", bottomText: bottomField.text ?? "", orginalText: img.image!, memedImage: memedImage)
         print(meme)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.memes.append(meme)
     }
     
     func generateMemedImage() -> UIImage {
